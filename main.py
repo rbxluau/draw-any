@@ -1,5 +1,5 @@
-import turtle
 from sys import argv
+import turtle
 
 import svgpathtools
 from tqdm import tqdm
