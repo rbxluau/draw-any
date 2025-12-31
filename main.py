@@ -1,6 +1,7 @@
 import turtle
-import svgpathtools
 from sys import argv
+
+import svgpathtools
 from tqdm import tqdm
 
 config = {
@@ -13,9 +14,9 @@ config = {
 for segments in tqdm([path for paths in svgpathtools.svg2paths(argv[1])[0] for path in paths.continuous_subpaths()]):
     turtle.penup()
     for segment in tqdm(segments, leave=False):
-        for i in range(1, config["t"]+1):
-            point = segment.point(i/config["t"])
-            turtle.goto(point.real*config["size"]+config["x"], point.imag*config["size"]+config["y"])
+        for i in range(1, config["t"] + 1):
+            point = segment.point(i / config["t"])
+            turtle.goto(point.real * config["size"] + config["x"], point.imag * config["size"] + config["y"])
             turtle.pendown()
 
 turtle.done()
