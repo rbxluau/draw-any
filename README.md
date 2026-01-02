@@ -1,6 +1,6 @@
 # Example
 ![](example.gif)
-# How to use?
+# Usage
 ```bash
 python main.py [svgPath]
 ```
